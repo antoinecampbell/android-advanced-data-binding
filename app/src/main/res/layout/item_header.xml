@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.antoinecampbell.advanceddatabinding.domain.recycler.HeaderItem"/>
+    </data>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#DDD"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:text="@{data.title}"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        tools:text="Header"/>
+</layout>
