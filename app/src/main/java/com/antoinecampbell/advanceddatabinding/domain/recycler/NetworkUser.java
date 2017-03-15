@@ -3,12 +3,12 @@ package com.antoinecampbell.advanceddatabinding.domain.recycler;
 /**
  * @author acampbell
  */
-public class NetowrkUser {
+public class NetworkUser {
 
     private final String name;
     private final String imageUrl;
 
-    public NetowrkUser(String name, String imageUrl) {
+    public NetworkUser(String name, String imageUrl) {
         this.name = name;
         this.imageUrl = imageUrl;
     }

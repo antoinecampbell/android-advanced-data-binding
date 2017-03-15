@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 
 import com.antoinecampbell.advanceddatabinding.databinding.FragmentRecyclerviewBinding;
 import com.antoinecampbell.advanceddatabinding.domain.RecyclerviewFragmentViewModel;
-import com.antoinecampbell.advanceddatabinding.domain.recycler.NetowrkUser;
+import com.antoinecampbell.advanceddatabinding.domain.recycler.NetworkUser;
 import com.antoinecampbell.advanceddatabinding.fragment.RecyclerviewAdapter.ActionCallback;
 
 import java.util.Arrays;
@@ -56,14 +56,14 @@ public class RecyclerviewBindingFragment extends Fragment implements ActionCallb
             @Override
             public void run() {
                 viewModel.setLoading(false);
-                List<NetowrkUser> users = Arrays.asList(
-                        new NetowrkUser("Bill Murray", "http://fillmurray.com/406/406"),
-                        new NetowrkUser("Bill Murray", "http://fillmurray.com/405/405"),
-                        new NetowrkUser("Bill Murray", "http://fillmurray.com/404/404"),
-                        new NetowrkUser("Bill Murray", "http://fillmurray.com/403/403"),
-                        new NetowrkUser("Bill Murray", "http://fillmurray.com/401/401"));
+                List<NetworkUser> users = Arrays.asList(
+                        new NetworkUser(null, "http://fillmurray.com/406/406"),
+                        new NetworkUser("Bill Murray", "http://fillmurray.com/405/405"),
+                        new NetworkUser("Bill Murray", "http://fillmurray.com/404/404"),
+                        new NetworkUser("Bill Murray", "http://fillmurray.com/403/403"),
+                        new NetworkUser("Bill Murray", "http://fillmurray.com/401/401"));
                 adapter.addUsers(users);
-                adapter.setUpdatingUserItem(new NetowrkUser("Bill Murray", "http://fillmurray.com/401/401"));
+                adapter.setUpdatingUserItem(new NetworkUser("Bill Murray", "http://fillmurray.com/401/401"));
             }
         }, 2000);
     }
@@ -77,7 +77,7 @@ public class RecyclerviewBindingFragment extends Fragment implements ActionCallb
             @Override
             public void run() {
                 viewModel.setLoading(false);
-                adapter.setUpdatingUserItem(new NetowrkUser("Bill Murray", imageUrl));
+                adapter.setUpdatingUserItem(new NetworkUser("Bill Murray", imageUrl));
             }
         }, 2000);
     }

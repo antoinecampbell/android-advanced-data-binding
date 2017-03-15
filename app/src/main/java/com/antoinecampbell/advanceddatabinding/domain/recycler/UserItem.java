@@ -12,9 +12,9 @@ import com.antoinecampbell.advanceddatabinding.binding.BaseObservableLayoutItem;
 public class UserItem extends BaseObservableLayoutItem {
 
     @Bindable
-    private NetowrkUser user;
+    private NetworkUser user;
 
-    public UserItem(NetowrkUser user) {
+    public UserItem(NetworkUser user) {
         setUser(user);
     }
 
@@ -23,11 +23,11 @@ public class UserItem extends BaseObservableLayoutItem {
         return R.layout.item_user;
     }
 
-    public NetowrkUser getUser() {
+    public NetworkUser getUser() {
         return user;
     }
 
-    public void setUser(NetowrkUser user) {
+    public void setUser(NetworkUser user) {
         this.user = user;
         notifyPropertyChanged(BR.user);
     }

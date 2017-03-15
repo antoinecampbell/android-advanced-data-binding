@@ -5,7 +5,7 @@ import com.antoinecampbell.advanceddatabinding.binding.BaseObservableLayoutItem;
 import com.antoinecampbell.advanceddatabinding.binding.DataBoundViewHolder;
 import com.antoinecampbell.advanceddatabinding.binding.MultiTypeDataBoundAdapter;
 import com.antoinecampbell.advanceddatabinding.domain.recycler.HeaderItem;
-import com.antoinecampbell.advanceddatabinding.domain.recycler.NetowrkUser;
+import com.antoinecampbell.advanceddatabinding.domain.recycler.NetworkUser;
 import com.antoinecampbell.advanceddatabinding.domain.recycler.UpdateItem;
 import com.antoinecampbell.advanceddatabinding.domain.recycler.UserItem;
 
@@ -44,16 +44,16 @@ public class RecyclerviewAdapter extends MultiTypeDataBoundAdapter {
         addItem(new HeaderItem(title));
     }
 
-    public void addUsers(List<NetowrkUser> users) {
+    public void addUsers(List<NetworkUser> users) {
         addItem(new HeaderItem("Users"));
         if (users != null) {
-            for (NetowrkUser user : users) {
+            for (NetworkUser user : users) {
                 addItem(new UserItem(user));
             }
         }
     }
 
-    public void setUpdatingUserItem(NetowrkUser user) {
+    public void setUpdatingUserItem(NetworkUser user) {
         if (updaatingUserItem == null) {
             addHeader("Updating Item");
             addItem(new UpdateItem());
